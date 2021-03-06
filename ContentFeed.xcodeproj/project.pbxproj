@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1472FD4625F3CF8100CA641C /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1472FD4525F3CF8100CA641C /* Parser.swift */; };
 		1472FD4925F3D30200CA641C /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1472FD4825F3D30200CA641C /* Layout.swift */; };
+		147CD72825F3ED98003DDDBD /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 147CD72725F3ED98003DDDBD /* 1.jpg */; };
 		14BC78DD25F3CA0D002A7C18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BC78DC25F3CA0D002A7C18 /* AppDelegate.swift */; };
 		14BC78DF25F3CA0D002A7C18 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BC78DE25F3CA0D002A7C18 /* SceneDelegate.swift */; };
 		14BC78E125F3CA0D002A7C18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BC78E025F3CA0D002A7C18 /* ViewController.swift */; };
@@ -16,13 +17,13 @@
 		14BC78E625F3CA0D002A7C18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14BC78E525F3CA0D002A7C18 /* Assets.xcassets */; };
 		14BC78E925F3CA0D002A7C18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14BC78E725F3CA0D002A7C18 /* LaunchScreen.storyboard */; };
 		14BC78F325F3CA27002A7C18 /* Asana in Frameworks */ = {isa = PBXBuildFile; productRef = 14BC78F225F3CA27002A7C18 /* Asana */; };
-		14D7B12725F3E63F001075ED /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D7B12625F3E63E001075ED /* 1.png */; };
 		14D7B12A25F3E6C8001075ED /* LayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D7B12925F3E6C8001075ED /* LayoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1472FD4525F3CF8100CA641C /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		1472FD4825F3D30200CA641C /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		147CD72725F3ED98003DDDBD /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		14BC78D925F3CA0D002A7C18 /* ContentFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContentFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14BC78DC25F3CA0D002A7C18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14BC78DE25F3CA0D002A7C18 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,7 +32,6 @@
 		14BC78EA25F3CA0D002A7C18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14BC78F525F3CAAD002A7C18 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14BC78F625F3CAAD002A7C18 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
-		14D7B12625F3E63E001075ED /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		14D7B12925F3E6C8001075ED /* LayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,7 +66,7 @@
 		14BC78DB25F3CA0D002A7C18 /* ContentFeed */ = {
 			isa = PBXGroup;
 			children = (
-				14D7B12625F3E63E001075ED /* 1.png */,
+				147CD72725F3ED98003DDDBD /* 1.jpg */,
 				14BC78F825F3CACF002A7C18 /* Sources */,
 				14BC78DC25F3CA0D002A7C18 /* AppDelegate.swift */,
 				14BC78DE25F3CA0D002A7C18 /* SceneDelegate.swift */,
@@ -152,7 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14BC78E925F3CA0D002A7C18 /* LaunchScreen.storyboard in Resources */,
-				14D7B12725F3E63F001075ED /* 1.png in Resources */,
+				147CD72825F3ED98003DDDBD /* 1.jpg in Resources */,
 				14BC78E625F3CA0D002A7C18 /* Assets.xcassets in Resources */,
 				14BC78E425F3CA0D002A7C18 /* Main.storyboard in Resources */,
 			);
