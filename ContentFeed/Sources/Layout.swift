@@ -88,8 +88,8 @@ enum XMLayout {
             }.flatMap {
                 view.isHidden = true
 
-                DispatchQueue.main.asyncAfter(deadline: .now() + $0) {
-                    view.isHidden = false
+                DispatchQueue.main.asyncAfter(deadline: .now() + $0) { [weak view] in
+                    view?.isHidden = false
                 }
             }
         }
