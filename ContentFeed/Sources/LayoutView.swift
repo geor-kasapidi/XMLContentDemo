@@ -29,7 +29,7 @@ final class LayoutViewController: UIViewController {
         let layout = LayoutCalculator.makeLayout(
             node: self.rootNode,
             bounds: self.view.bounds.size,
-            direction: self.view.effectiveUserInterfaceLayoutDirection
+            rtl: self.view.effectiveUserInterfaceLayoutDirection == .rightToLeft
         )
 
         layout.setup(view: self.contentView)
