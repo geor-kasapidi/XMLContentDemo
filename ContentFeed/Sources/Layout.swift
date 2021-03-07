@@ -11,6 +11,8 @@ enum XMLayout {
             return LayoutNode(children: []) {
                 $0.setup(attributes: xmlNode.attributes)
             } view: { (view: UIImageView, isNew) in
+                view.clipsToBounds = true
+
                 self.setupCommonViewAttributes(view: view, attributes: xmlNode.attributes, isNew: isNew)
 
                 switch xmlNode.attributes["contentMode"] {
