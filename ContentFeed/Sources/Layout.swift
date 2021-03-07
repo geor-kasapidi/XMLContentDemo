@@ -3,6 +3,7 @@ import UIKit
 import Asana
 import SwiftYoga
 import CYoga
+import Lottie
 
 enum XMLayout {
     static func makeLayoutNode(_ xmlNode: XML.Node) -> LayoutNode? {
@@ -64,12 +65,31 @@ enum XMLayout {
             } view: { (label: UILabel, isNew) in
                 self.setupCommonViewAttributes(view: label, attributes: xmlNode.attributes, isNew: isNew)
 
-                if isNew {
-                    label.numberOfLines = 0
-                }
+                label.numberOfLines = 0
                 label.attributedText = string
             }
+        case "Lottie":
+            return LayoutNode(children: []) {
+                $0.setup(attributes: xmlNode.attributes)
+            } view: { (view: AnimationView, isNew) in
+                if isNew {
+                    xmlNode.attributes["animationBundleName"].flatMap {
+                        Animation.named($0)
+                    }.flatMap {
+                        view.animation = $0
+                        view.loopMode = .loop
+                        view.play()
+                    }
+                }
+            }
+        case "Placeholder":
+            let children = xmlNode.children.map {
+                self.makeLayoutNode($0)
+            }
 
+            return LayoutNode(children: children) {
+                $0.setup(attributes: xmlNode.attributes)
+            }
         default:
             let children = xmlNode.children.map {
                 self.makeLayoutNode($0)
@@ -112,7 +132,11 @@ enum XMLayout {
 
 extension NSAttributedString: SizeProvider {
     public func calculateSize(bounds: CGSize) -> CGSize {
-        self.boundingRect(with: bounds, options: .usesLineFragmentOrigin, context: nil).size
+        let normalizedBounds = CGSize(
+            width: bounds.width.isNormal ? bounds.width : .greatestFiniteMagnitude,
+            height: bounds.height.isNormal ? bounds.height : .greatestFiniteMagnitude
+        )
+        return self.boundingRect(with: normalizedBounds, options: .usesLineFragmentOrigin, context: nil).size
     }
 }
 
